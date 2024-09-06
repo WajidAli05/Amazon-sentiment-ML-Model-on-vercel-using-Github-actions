@@ -25,10 +25,6 @@ jobs:
         python -m pip install --upgrade pip  # Upgrade pip to the latest version
         pip install -r requirements.txt      # Install all dependencies from requirements.txt
 
-    - name: Run tests (optional)
-      run: |
-        pytest  # Assuming you have tests in your repo; if not, you can remove this step
-
     - name: Deploy to Vercel
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Use the Vercel token from GitHub Secrets
