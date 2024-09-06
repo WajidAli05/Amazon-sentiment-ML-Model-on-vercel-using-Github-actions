@@ -30,7 +30,8 @@ jobs:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       run: |
         npm install -g vercel  # Install Vercel CLI globally
-        vercel --prod --token=$VERCEL_TOKEN --yes  # Deploy to production using the --yes flag
+        vercel --prod --token=$VERCEL_TOKEN --yes  # Use --yes instead of the deprecated --confirm
+      
       
 
     - name: Notify deployment success
